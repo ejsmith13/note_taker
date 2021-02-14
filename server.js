@@ -13,15 +13,13 @@ app.use(express.static("public"));
 app.use(express.json());
 
 
+
 //route that sends user to notes taking page
 app.get("/notes", (req, res) =>
   res.sendFile(path.join(__dirname, "public/notes.html"))
 );
 
-//send user to initial home screen
-app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, "public/index.html"))
-);
+
 
 
 
@@ -45,6 +43,11 @@ app.get("/api/notes/:id", (req, res) => {
 
   return res.json(false);
 });
+
+//send user to initial home screen
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, "public/index.html"))
+);
 
 
 //Listener
