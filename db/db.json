@@ -1,6 +1,7 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "id": "notetaker",
+        "title":"Note Taker",
+        "text":"Use this app to make a list of notes. Simply click on the new note icon, give your note a title, write your text, and hit the save icon"
     }
 ]
