@@ -20,6 +20,11 @@ app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, 'public/notes.
 
 app.get('/api/notes', (req, res) => res.json(notesData));
 
+app.post('/api/notes', (req, res) => {
+    notesData.push(req.body);
+    res.json(true) 
+  });
+
 
 
 //Listener
