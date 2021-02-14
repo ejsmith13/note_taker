@@ -11,8 +11,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //send user to initial home screen
-// Basic route that sends the user first to the AJAX Page
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public/index.html')));
+
+//route that sends user to notes taking page
+app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, 'public/notes.html')));
 
 
 
